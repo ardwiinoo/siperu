@@ -1,0 +1,53 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+
+#navbar_top {
+    background-color: #21476c;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Hero */
+.hero {
+    height: 300px;
+    text-align: left;
+    background-color: #21476c;
+}
+
+.hero h1 {
+    padding-top: 2em;
+    color: #fff;
+    padding-left: 1em;
+}
+
+.searchHero {
+    margin-right: 50px;
+    margin-top: -40px;
+    background-color: #f2c204;
+    border: unset;
+}
+
+#searchBtn {
+    width: 140px;
+    background-color: #21476c;
+    border: unset;
+}
+
+#namaKode,
+#kampus {
+    border: unset;
+}
+
+.pr {
+    background-color: #21476c;
+    color: #fff;
+}
+
+/* Ruang Favorit */
+
+.ruangFav {
+    /* background-color: #21476c; */
+}
