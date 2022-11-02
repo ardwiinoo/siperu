@@ -12,7 +12,7 @@ require_once "./partials/head.html";
     <div class="container">
         <div class="row mt-4">
             <div class="col">
-                <div class="card hero">
+                <div class="card hero border-0">
                     <div class="card-body">
                         <h1>Pinjam Ruangan<br>Lebih Mudah Dengan Siperu.</h1>
                     </div>
@@ -20,7 +20,7 @@ require_once "./partials/head.html";
                 <div class="card p-3 mr-3 float-end searchHero">
                     <form class="row row-cols-lg-auto g-3 align-items-center">
                         <div class="col-12">
-                            <select class="form-select" id="kampus" name="kampus">
+                            <select class="form-select-lg" id="kampus" name="kampus">
                                 <option selected>Kampus</option>
                                 <option value="1">Kampus 1</option>
                                 <option value="2">Kampus 2</option>
@@ -31,11 +31,11 @@ require_once "./partials/head.html";
                         </div>
 
                         <div class="col-12">
-                            <input type="text" class="form-control " placeholder="Nama/Kode Ruang" name="namaKode" id="namaKode">
+                            <input type="text" class="form-control-lg " placeholder="Nama/Kode Ruang" name="namaKode" id="namaKode">
                         </div>
 
                         <div class="col-12">
-                            <button type="submit" class="btn btn-primary" name="search" id="searchBtn">Cari</button>
+                            <button type="submit" class="btn btn-primary btn-lg" name="search" id="searchBtn">Cari</button>
                         </div>
                     </form>
                 </div>
@@ -99,7 +99,7 @@ require_once "./partials/head.html";
         <h2 class="text-center mb-3">Mengapa Menggunakan Siperu?</h2>
         <div class="row mt-4">
             <div class="col-sm">
-                <div class="card">
+                <div class="card border-0">
                     <div class="card-body">
                         <h4><i class="bi bi-stopwatch-fill"></i> Akses Kapan Saja</h4>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus fuga, qui dignissimos enim culpa, expedita aperiam totam, dolorum excepturi dicta vitae saepe? Explicabo et qui consequuntur vitae corporis delectus suscipit?</p>
@@ -108,7 +108,7 @@ require_once "./partials/head.html";
 
             </div>
             <div class="col-sm">
-                <div class="card">
+                <div class="card border-0">
                     <div class="card-body">
                         <h4><i class="bi bi-diagram-3-fill"></i> Terintegrasi SIMERU</h4>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus fuga, qui dignissimos enim culpa, expedita aperiam totam, dolorum excepturi dicta vitae saepe? Explicabo et qui consequuntur vitae corporis delectus suscipit?</p>
@@ -119,7 +119,7 @@ require_once "./partials/head.html";
         </div>
         <div class="row mt-4">
             <div class="col-sm">
-                <div class="card">
+                <div class="card border-0">
                     <div class="card-body">
                         <h4><i class="bi bi-cloud-upload-fill"></i> Ajukan dulu lengkapi kemudian</h4>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus fuga, qui dignissimos enim culpa, expedita aperiam totam, dolorum excepturi dicta vitae saepe? Explicabo et qui consequuntur vitae corporis delectus suscipit?</p>
@@ -128,7 +128,7 @@ require_once "./partials/head.html";
 
             </div>
             <div class="col-sm">
-                <div class="card">
+                <div class="card border-0">
                     <div class="card-body">
                         <h4><i class="bi bi-smartwatch"></i> Hemat waktu</h4>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus fuga, qui dignissimos enim culpa, expedita aperiam totam, dolorum excepturi dicta vitae saepe? Explicabo et qui consequuntur vitae corporis delectus suscipit?</p>
@@ -140,17 +140,22 @@ require_once "./partials/head.html";
 
     <div class="container mt-4">
         <h2 class="text-center mb-3">Kami Bekerjasama Dengan</h2>
+        <div class="container text-center mb-3">
+            <img src="./assets/images/uad-logo.png" class="img-fluid">
+            <img src="./assets/images/uad-logo.png" class="img-fluid">
+            <img src="./assets/images/uad-logo.png" class="img-fluid">
+        </div>
     </div>
 
     <div class="container mt-4 mb-4">
-        <div class="card p-4">
+        <div class="card border-0" style="background-color: #f2c204;">
             <div class="card-body">
-                <div class="row">
-                    <div class="col">
-                        <h3>Ayo Pinjam Ruangan Sekarang</h3>
+                <div class="row p-4">
+                    <div class="col-md">
+                        <h3 class="mt-3"><b>Ayo Pinjam Ruangan Sekarang</b></h3>
                     </div>
-                    <div class="col">
-                        <button class="btn pr float-end btn-lg" type="button">Button</button>
+                    <div class="col-md">
+                        <button class="btn float-end btn-lg w-75 text-white" style="height: 4rem; background-color: #21476c;" type="button">Cari</button>
                     </div>
                 </div>
             </div>
