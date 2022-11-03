@@ -9,15 +9,16 @@ require_once "./partials/head.html";
     require_once "./partials/navbar.html";
     ?>
 
-    <div class="container">
+    <div class="container" id="first">
         <div class="row mt-4">
+            <div class="searchBox">
             <div class="col">
                 <div class="card hero border-0">
                     <div class="card-body">
                         <h1>Pinjam Ruangan<br>Lebih Mudah Dengan Siperu.</h1>
                     </div>
                 </div>
-                <div class="card p-3 mr-3 float-end searchHero">
+                    <div class="card p-3 mr-3 searchHero">
                     <form class="row row-cols-lg-auto g-3 align-items-center">
                         <div class="col-12">
                             <select class="form-select-lg" id="kampus" name="kampus">
@@ -39,6 +40,7 @@ require_once "./partials/head.html";
                         </div>
                     </form>
                 </div>
+                </div>
             </div>
         </div>
     </div>
@@ -48,45 +50,45 @@ require_once "./partials/head.html";
             <h2 class="mb-3">Ruang Favorit</h2>
             <div class="row mt-2">
                 <div class="col-md mb-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card favCard">
                         <img src="./assets/images/cover1.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <div class="d-grid gap-2">
-                                <button class="btn btn-primary" type="button">Button</button>
+                                <button class="btn btn-primary btn-lg" type="button">Button</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md mb-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card favCard">
                         <img src="./assets/images/cover2.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <div class="d-grid gap-2">
-                                <button class="btn btn-primary" type="button">Button</button>
+                                <button class="btn btn-primary btn-lg" type="button">Button</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md mb-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card favCard">
                         <img src="./assets/images/cover1.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <div class="d-grid gap-2">
-                                <button class="btn btn-primary" type="button">Button</button>
+                                <button class="btn btn-primary btn-lg" type="button">Button</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md mb-3">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card favCard">
                         <img src="./assets/images/cover2.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <div class="d-grid gap-2">
-                                <button class="btn btn-primary" type="button">Button</button>
+                                <button class="btn btn-primary btn-lg" type="button">Button</button>
                             </div>
                         </div>
                     </div>
@@ -97,7 +99,7 @@ require_once "./partials/head.html";
 
     <div class="container mt-4">
         <h2 class="text-center mb-3">Mengapa Menggunakan Siperu?</h2>
-        <div class="row mt-4">
+        <div class="row mt-4 reason">
             <div class="col-sm">
                 <div class="card border-0">
                     <div class="card-body">
@@ -117,7 +119,7 @@ require_once "./partials/head.html";
 
             </div>
         </div>
-        <div class="row mt-4">
+        <div class="row mt-4 reason">
             <div class="col-sm">
                 <div class="card border-0">
                     <div class="card-body">
@@ -155,7 +157,7 @@ require_once "./partials/head.html";
                         <h3 class="mt-3"><b>Ayo Pinjam Ruangan Sekarang</b></h3>
                     </div>
                     <div class="col-md">
-                        <button class="btn float-end btn-lg w-75 text-white" style="height: 4rem; background-color: #21476c;" type="button">Cari</button>
+                        <a href="#first"><button class="btn float-end btn-lg w-75 text-white" style="height: 4rem; background-color: #21476c;" type="button">Cari</button></a>
                     </div>
                 </div>
             </div>
