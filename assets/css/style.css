@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
     font-family: 'Poppins', sans-serif;
 }
@@ -24,6 +28,7 @@
 }
 
 .searchHero {
+    float: right;
     margin-right: 50px;
     margin-top: -40px;
     background-color: #f2c204;
@@ -52,6 +57,15 @@
     /* background-color: #21476c; */
 }
 
+.favCard {
+    width: 18rem;
+}
+
+/* Reason */
+.reason p {
+    text-align: justify;
+}
+
 /* Resposive */
 
 @media only screen and (max-width: 768px) {
@@ -59,10 +73,16 @@
         /* background-color: red; */
     }
 
+    .searchBox {
+        width: 100%;
+        /*background-color: red;*/
+    }
+
     .searchHero {
-        margin-top: -60px;
-        margin-right: 45px;
-        width: 300px;
+        margin: 0 auto;
+        width: 450px;
+        float: none;
+        margin-top: -50px;
     }
 
     .searchHero input,
@@ -74,5 +94,14 @@
         width: 100%;
     }
 
+}
 
+@media only screen and (max-width: 425px) {
+    .searchHero {
+        width: 300px;
+    }
+
+    .favCard {
+        width: 100%;
+    }
 }
