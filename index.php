@@ -1,4 +1,6 @@
 <?php
+$title = "SIPERU - Home";
+
 require_once "./partials/head.html";
 ?>
 
