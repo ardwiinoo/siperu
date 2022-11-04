@@ -5,11 +5,17 @@ require_once "./partials/head.html";
 ?>
 
 <body>
-
-    </div>
     <?php
     require_once "./partials/navbar.html";
     ?>
+
+    <!-- Notif -->
+    <?php if(isset($_GET['mess'])) { ?>
+        <div class="alert alert-primary alert-dismissible fade show">
+    <strong>Yeey!</strong> <?= $_GET['mess'] ?>.
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    <?php } ?>
 
     <div class="container" id="first">
         <div class="row mt-4">
@@ -163,6 +169,28 @@ require_once "./partials/head.html";
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Login</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form class="row row-cols-lg-auto g-3 align-items-center" method="POST" action="./process/loginCheck.php">
+                        <div class="col-12">
+                            <input type="number" class="form-control-lg " placeholder="Nomor Induk Mahasiswa" name="nim" id="nim">
+                        </div>
+
+                        <div class="col-12">
+                            <input type="password" class="form-control-lg " placeholder="Password" name="password" id="password">
+                        </div>
+
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary btn-lg" name="search" id="searchBtn">Login</button>
+                        </div>
+                    </form>
         </div>
     </div>
 
