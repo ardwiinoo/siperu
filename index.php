@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 $title = "SIPERU - Home";
 
 require_once "./partials/head.html";
@@ -10,44 +10,47 @@ require_once "./partials/head.html";
     ?>
 
     <!-- Notif -->
-    <?php if(isset($_GET['mess'])) { ?>
-        <div class="alert alert-primary alert-dismissible fade show">
-    <strong>Yeey!</strong> <?= $_GET['mess'] ?>.
-    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    </div>
-    <?php } ?>
+    <?php if (isset($_SESSION['status']) && $_SESSION['status'] != "") { ?>
+        <div class="container mt-4">
+            <div class="alert alert-success alert-dismissible fade show">
+                <strong>Yeey!</strong> <?= $_SESSION['status'] ?>.
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        </div>
+    <?php $_SESSION['status'] = "";
+    } ?>
 
     <div class="container" id="first">
         <div class="row mt-4">
             <div class="searchBox">
-            <div class="col">
-                <div class="card hero border-0">
-                    <div class="card-body">
-                        <h1>Pinjam Ruangan<br>Lebih Mudah Dengan Siperu.</h1>
+                <div class="col">
+                    <div class="card hero border-0">
+                        <div class="card-body">
+                            <h1>Pinjam Ruangan<br>Lebih Mudah Dengan Siperu.</h1>
+                        </div>
                     </div>
-                </div>
                     <div class="card p-3 mr-3 searchHero">
-                    <form class="row row-cols-lg-auto g-3 align-items-center">
-                        <div class="col-12">
-                            <select class="form-select-lg" id="kampus" name="kampus">
-                                <option selected>Kampus</option>
-                                <option value="1">Kampus 1</option>
-                                <option value="2">Kampus 2</option>
-                                <option value="3">Kampus 3</option>
-                                <option value="3">Kampus 4</option>
-                                <option value="3">Kampus 5</option>
-                            </select>
-                        </div>
+                        <form class="row row-cols-lg-auto g-3 align-items-center">
+                            <div class="col-12">
+                                <select class="form-select-lg" id="kampus" name="kampus">
+                                    <option selected>Kampus</option>
+                                    <option value="1">Kampus 1</option>
+                                    <option value="2">Kampus 2</option>
+                                    <option value="3">Kampus 3</option>
+                                    <option value="3">Kampus 4</option>
+                                    <option value="3">Kampus 5</option>
+                                </select>
+                            </div>
 
-                        <div class="col-12">
-                            <input type="text" class="form-control-lg " placeholder="Nama/Kode Ruang" name="namaKode" id="namaKode">
-                        </div>
+                            <div class="col-12">
+                                <input type="text" class="form-control-lg " placeholder="Nama/Kode Ruang" name="namaKode" id="namaKode">
+                            </div>
 
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-primary btn-lg" name="search" id="searchBtn">Cari</button>
-                        </div>
-                    </form>
-                </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg" name="search" id="searchBtn">Cari</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -179,18 +182,18 @@ require_once "./partials/head.html";
         </div>
         <div class="offcanvas-body">
             <form class="row row-cols-lg-auto g-3 align-items-center" method="POST" action="./process/loginCheck.php">
-                        <div class="col-12">
-                            <input type="number" class="form-control-lg " placeholder="Nomor Induk Mahasiswa" name="nim" id="nim">
-                        </div>
+                <div class="col-12">
+                    <input type="number" class="form-control-lg " placeholder="Nomor Induk Mahasiswa" name="nim" id="nim">
+                </div>
 
-                        <div class="col-12">
-                            <input type="password" class="form-control-lg " placeholder="Password" name="password" id="password">
-                        </div>
+                <div class="col-12">
+                    <input type="password" class="form-control-lg " placeholder="Password" name="password" id="password">
+                </div>
 
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-primary btn-lg" name="search" id="searchBtn">Login</button>
-                        </div>
-                    </form>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary btn-lg" name="search" id="searchBtn">Login</button>
+                </div>
+            </form>
         </div>
     </div>
 
