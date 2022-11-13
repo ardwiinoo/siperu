@@ -1,12 +1,12 @@
 <?php session_start();
 $title = "SIPERU - Home";
 
-require_once "./partials/head.html";
+require_once "./partials/head.php";
 ?>
 
 <body>
     <?php
-    require_once "./partials/navbar.html";
+    require_once "./partials/navbar.php";
     ?>
 
     <!-- Notif -->
@@ -65,9 +65,11 @@ require_once "./partials/head.html";
                         <img src="./assets/images/cover1.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <div class="d-grid gap-2">
-                                <button class="btn btn-primary btn-lg" type="button">Button</button>
-                            </div>
+                            <a href="./view_room.php">
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary btn-lg" type="button">Button</button>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -175,77 +177,10 @@ require_once "./partials/head.html";
         </div>
     </div>
 
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div id="log" style="display: block;">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasRightLabel">Login</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <form class="row row-cols-lg-auto g-3 align-items-center" method="POST" action="./process/loginCheck.php">
-                    <div class="col-12">
-                        <input type="number" class="form-control-lg " placeholder="Nomor Induk Mahasiswa" name="nim" id="nim">
-                    </div>
-
-                    <div class="col-12">
-                        <input type="password" class="form-control-lg " placeholder="Password" name="password" id="password">
-                    </div>
-
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary btn-lg" name="search" id="searchBtn">Login</button>
-                    </div>
-                </form>
-                <a href="#" onclick="changeLogReg()">Daftar</a>
-            </div>
-        </div>
-        <div id="reg" style="display: none;">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasRightLabel">Register</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <form class="row row-cols-lg-auto g-3 align-items-center" method="POST" action="./process/loginCheck.php">
-                    <div class="col-12">
-                        <input type="number" class="form-control-lg " placeholder="Nomor Induk Mahasiswa" name="nim" id="nim">
-                    </div>
-
-                    <div class="col-12">
-                        <input type="number" class="form-control-lg " placeholder="Nomor Induk Mahasiswa" name="nim" id="nim">
-                    </div>
-
-                    <div class="col-12">
-                        <input type="number" class="form-control-lg " placeholder="Nomor Induk Mahasiswa" name="nim" id="nim">
-                    </div>
-
-                    <div class="col-12">
-                        <input type="password" class="form-control-lg " placeholder="Password" name="password" id="password">
-                    </div>
-
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary btn-lg" name="search" id="searchBtn">Register</button>
-                    </div>
-                </form>
-                <a href="#" onclick="changeLogReg()">Login</a>
-            </div>
-        </div>
-    </div>
     <?php
-    require_once "./partials/footer.html";
+    require_once "./partials/loginRegisterForm.php";
+    require_once "./partials/footer.php";
     ?>
 
-    <script>
-        function changeLogReg() {
-            const log = document.getElementById('log');
-            const reg = document.getElementById('reg');
-
-            if (log.style.display == 'block') {
-                log.style.display = 'none';
-                reg.style.display = 'block';
-            } else {
-                log.style.display = 'block';
-                reg.style.display = 'none';
-            }
-
-        }
-    </script>
+    <script src="./assets/js/main.js"></script>
 </body>
