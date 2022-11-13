@@ -18,25 +18,25 @@
                          <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
                      </ul>
                  </li>
-                 <?php 
-                    if(isset($_SESSION['nim'])) {
+                 <?php
+                    if (isset($_SESSION['nim'])) {
                     ?>
-                    <li class="nav-item dropdown">
-                     <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown"> <?= $_SESSION['name']; ?> </a>
-                     <ul class="dropdown-menu dropdown-menu-right">
-                         <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
-                         <li><a class="dropdown-item" href="./process/logout.php">Logout</a></li>
-                     </ul>
-                 </li>
-                  <?php 
+                     <li class="nav-item dropdown">
+                         <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown"> <?= $_SESSION['name']; ?> </a>
+                         <ul class="dropdown-menu dropdown-menu-right">
+                             <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+                             <li><a class="dropdown-item" href="./process/logout.php">Logout</a></li>
+                         </ul>
+                     </li>
+                 <?php
                     } else {
                     ?>
-                    <li class="nav-item"><a class="nav-link btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="btnLogin">Login</button></a></li>
-                  <?php 
+                     <li class="nav-item"><a class="nav-link btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="btnLogin">Login</button></a></li>
+                 <?php
                     }
                     ?>
              </ul>
 
-         </div> 
-     </div> 
+         </div>
+     </div>
  </nav>
