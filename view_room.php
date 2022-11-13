@@ -30,7 +30,7 @@ require_once "./partials/head.php";
             <?php
             if (isset($_SESSION['nim'])) {
             ?>
-                <div class="col-md">
+                <div class="col-md mb-3">
                     <div class="card bg-secondary border-0">
                         <div class="card-body">
                             <form action="#">
@@ -46,7 +46,7 @@ require_once "./partials/head.php";
                         </div>
                     </div>
                 </div>
-                <div class="col-md">
+                <div class="col-md mb-3">
                     <div class="card bg-secondary border-0">
                         <div class="card-body">
                             <div class="custom-control custom-checkbox">
@@ -69,7 +69,7 @@ require_once "./partials/head.php";
                     </div>
                 </div>
             <?php } else { ?>
-                <div class="col">
+                <div class="col mb-3">
                     <div class="card bg-secondary border-0">
                         <div class="card-body">
                             <h1>Login untuk melanjutkan</h1>
