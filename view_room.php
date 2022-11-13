@@ -1,12 +1,12 @@
 <?php session_start();
 $title = "SIPERU - Details";
 
-require_once "./partials/head.html";
+require_once "./partials/head.php";
 ?>
 
 <body>
     <?php
-    require_once "./partials/navbar.html";
+    require_once "./partials/navbar.php";
     ?>
 
     <div class="container">
@@ -20,8 +20,13 @@ require_once "./partials/head.html";
         </div>
     </div>
 
+
+
     <?php
-    require_once "./partials/footer.html";
+    require_once "./partials/loginRegisterForm.php";
+    require_once "./partials/footer.php";
     ?>
+
+    <script src="./assets/js/main.js"></script>
 
 </body>
